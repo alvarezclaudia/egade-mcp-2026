@@ -12,8 +12,8 @@
       --teal:  #5DE0CC;
       --gold:  #F0C040;
       --white: #FFFFFF;
-      --light: #C8D4E0;
-      --dim:   rgba(200,212,224,0.55);
+      --light: #D8E4EE;
+      --dim:   #8FA3B5;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,7 +34,7 @@
     .nav-sessions { display: flex; gap: 4px; flex-wrap: wrap; }
     .nav-sessions a {
       padding: 4px 10px; border-radius: 14px; font-size: 11px; text-decoration: none;
-      color: var(--dim); border: 1px solid transparent; transition: all .2s; white-space: nowrap;
+      color: var(--dim); border: 1px solid transparent; transition: all .2s; white-space: nowrap; font-weight: 600;
     }
     .nav-sessions a:hover { color: var(--white); border-color: rgba(93,224,204,0.3); }
     .nav-sessions a.active { background: var(--teal); color: var(--navy); font-weight: 700; border-color: var(--teal); }
@@ -65,7 +65,7 @@
     /* ── TAGS ── */
     .phase-tag {
       display: inline-flex; align-items: center; gap: 8px;
-      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+      font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
       color: var(--teal); font-weight: 700; margin-bottom: 10px;
     }
     .phase-tag .dot {
@@ -107,7 +107,7 @@
     }
     .cover-meta { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 8px; }
     .meta-item { display: flex; flex-direction: column; gap: 4px; }
-    .meta-label { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal); font-weight: 700; }
+    .meta-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); font-weight: 700; }
     .meta-value { font-size: 14px; color: var(--light); }
 
     /* ── PREP SECTION ── */
@@ -147,7 +147,7 @@
       background: linear-gradient(135deg, rgba(242,82,76,0.1), rgba(93,224,204,0.07));
       border: 1px solid rgba(240,192,64,0.25); border-radius: 10px; padding: 24px 28px; margin-bottom: 18px;
     }
-    .callout-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+    .callout-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
     .callout p { margin: 0; font-size: 14px; }
 
     /* ── SESSION SCREENS ── */
@@ -192,8 +192,8 @@
 
     /* Placeholder */
     .placeholder {
-      border: 1px dashed rgba(93,224,204,0.2); border-radius: 10px;
-      padding: 24px; text-align: center; color: var(--dim); font-size: 13px;
+      border: 1px dashed rgba(93,224,204,0.3); border-radius: 10px;
+      padding: 24px; text-align: center; color: var(--dim); font-size: 14px;
       font-style: italic; margin-top: 20px; max-width: 600px;
     }
 
@@ -204,6 +204,20 @@
     }
     .scroll-arrow { width: 20px; height: 20px; border-right: 2px solid var(--teal); border-bottom: 2px solid var(--teal); transform: rotate(45deg); animation: bounce 1.6s infinite; }
     @keyframes bounce { 0%,100%{transform:rotate(45deg) translateY(0)} 50%{transform:rotate(45deg) translateY(5px)} }
+
+    /* ── LOCKED SESSIONS ── */
+    .locked .session-cols,
+    .locked .placeholder,
+    .locked .deliverables { display: none !important; }
+    .lock-msg { display: none; }
+    .locked .lock-msg {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+      margin-top: 32px; padding: 28px 32px;
+      border: 1px dashed rgba(93,224,204,0.2); border-radius: 12px;
+      max-width: 480px;
+    }
+    .lock-msg .lock-icon { font-size: 28px; }
+    .lock-msg p { font-size: 15px; color: var(--dim); margin: 0; font-style: italic; }
 
     /* Lang layers */
     .lang-es .en, .lang-en .es { display: none !important; }
@@ -448,13 +462,19 @@
 <!-- ══════════════════════════════════
      3. SESIÓN 1 — Jun 30
 ══════════════════════════════════ -->
-<section id="s1">
+<section id="s1" class="locked">
   <span class="ghost-num">S1</span>
   <div class="phase-tag coral"><span class="dot"></span><span class="es">Sesión 1 · Virtual · Zoom · 3 horas</span><span class="en">Session 1 · Virtual · Zoom · 3 hours</span></div>
   <div class="date-badge coral">Jun 30 · 9am–12pm MX</div>
 
   <h2 class="es">Roles, Contexto y <em>Job To Be Done</em></h2>
   <h2 class="en">Roles, Context and <em>Job To Be Done</em></h2>
+
+  <div class="lock-msg">
+    <span class="lock-icon">🔒</span>
+    <p class="es">Contenido disponible después de la sesión del 30 de junio.</p>
+    <p class="en">Content available after the June 30 session.</p>
+  </div>
 
   <div class="session-cols">
     <div class="col-block">
@@ -496,13 +516,19 @@
 <!-- ══════════════════════════════════
      4. SESIÓN 2 — Jul 9
 ══════════════════════════════════ -->
-<section id="s2">
+<section id="s2" class="locked">
   <span class="ghost-num">S2</span>
   <div class="phase-tag coral"><span class="dot"></span><span class="es">Sesión 2 · Virtual · Zoom · 3 horas</span><span class="en">Session 2 · Virtual · Zoom · 3 hours</span></div>
   <div class="date-badge coral">Jul 9 · 9am–12pm MX</div>
 
   <h2 class="es">Curiosidad, Indagación y el Consultor <em>en la Era de la IA</em></h2>
   <h2 class="en">Curiosity, Inquiry and the Consultant <em>in the Age of AI</em></h2>
+
+  <div class="lock-msg">
+    <span class="lock-icon">🔒</span>
+    <p class="es">Contenido disponible después de la sesión del 9 de julio.</p>
+    <p class="en">Content available after the July 9 session.</p>
+  </div>
 
   <div class="session-cols">
     <div class="col-block">
@@ -544,13 +570,19 @@
 <!-- ══════════════════════════════════
      5. DÍA 1 — Ago 3
 ══════════════════════════════════ -->
-<section id="d1">
+<section id="d1" class="locked">
   <span class="ghost-num">D1</span>
   <div class="phase-tag gold"><span class="dot"></span><span class="es">Día 1 · Presencial · 4 horas</span><span class="en">Day 1 · In-person · 4 hours</span></div>
   <div class="date-badge gold">Ago 3 · 3–7pm MX</div>
 
   <h2 class="es">Evidencia, Propósito, Modelo Operativo <em>e Influencia del Cambio</em></h2>
   <h2 class="en">Evidence, Purpose, Operating Model <em>and Change Influence</em></h2>
+
+  <div class="lock-msg">
+    <span class="lock-icon">🔒</span>
+    <p class="es">Contenido disponible después del 3 de agosto.</p>
+    <p class="en">Content available after August 3.</p>
+  </div>
 
   <div class="session-cols">
     <div class="col-block">
@@ -586,13 +618,19 @@
 <!-- ══════════════════════════════════
      6. DÍA 2 — Ago 4
 ══════════════════════════════════ -->
-<section id="d2">
+<section id="d2" class="locked">
   <span class="ghost-num">D2</span>
   <div class="phase-tag gold"><span class="dot"></span><span class="es">Día 2 · Presencial · 8 horas</span><span class="en">Day 2 · In-person · 8 hours</span></div>
   <div class="date-badge gold">Ago 4 · 8am–6pm MX</div>
 
   <h2 class="es">Analysis Deck <em>e Indagación Profunda</em></h2>
   <h2 class="en">Analysis Deck <em>and Deep Inquiry</em></h2>
+
+  <div class="lock-msg">
+    <span class="lock-icon">🔒</span>
+    <p class="es">Contenido disponible después del 4 de agosto.</p>
+    <p class="en">Content available after August 4.</p>
+  </div>
 
   <div class="session-cols">
     <div class="col-block">
@@ -625,13 +663,19 @@
 <!-- ══════════════════════════════════
      7. DÍA 3 — Ago 5
 ══════════════════════════════════ -->
-<section id="d3">
+<section id="d3" class="locked">
   <span class="ghost-num">D3</span>
   <div class="phase-tag gold"><span class="dot"></span><span class="es">Día 3 · Presencial · 4 horas</span><span class="en">Day 3 · In-person · 4 hours</span></div>
   <div class="date-badge gold">Ago 5 · 8am–1pm MX</div>
 
   <h2 class="es">Decision Deck, GAP vs JTBD <em>y Strategy Slam</em></h2>
   <h2 class="en">Decision Deck, GAP vs JTBD <em>and Strategy Slam</em></h2>
+
+  <div class="lock-msg">
+    <span class="lock-icon">🔒</span>
+    <p class="es">Contenido disponible después del 5 de agosto.</p>
+    <p class="en">Content available after August 5.</p>
+  </div>
 
   <div class="session-cols">
     <div class="col-block">
@@ -668,7 +712,7 @@
 <!-- ══════════════════════════════════
      8. WORK-PROJECT
 ══════════════════════════════════ -->
-<section id="wp">
+<section id="wp" class="locked">
   <span class="ghost-num">WP</span>
   <div class="phase-tag"><span class="dot"></span><span class="es">Work-Project · Autodirigido · ~3 hrs</span><span class="en">Work-Project · Self-managed · ~3 hrs</span></div>
   <div class="date-badge es">Después del 5 de agosto</div>
@@ -676,6 +720,12 @@
 
   <h2 class="es">Validación con el Cliente, Refinamiento <em>y Pitch de Liderazgo</em></h2>
   <h2 class="en">Client Validation, Refinement <em>and Leadership Pitch</em></h2>
+
+  <div class="lock-msg">
+    <span class="lock-icon">🔒</span>
+    <p class="es">Contenido disponible después del programa presencial.</p>
+    <p class="en">Content available after the in-person program.</p>
+  </div>
 
   <div class="session-cols">
     <div class="col-block">
@@ -709,7 +759,7 @@
 <!-- ══════════════════════════════════
      9. POST-COURSE
 ══════════════════════════════════ -->
-<section id="post">
+<section id="post" class="locked">
   <span class="ghost-num">PC</span>
   <div class="phase-tag"><span class="dot"></span><span class="es">Post-Curso · Autodirigido</span><span class="en">Post-Course · Self-paced</span></div>
   <div class="date-badge es">Después del programa</div>
@@ -717,6 +767,12 @@
 
   <h2 class="es">Reflexión y <em>Transferencia a la Enseñanza</em></h2>
   <h2 class="en">Reflection and <em>Teaching Transfer</em></h2>
+
+  <div class="lock-msg">
+    <span class="lock-icon">🔒</span>
+    <p class="es">Contenido disponible al finalizar el programa.</p>
+    <p class="en">Content available upon program completion.</p>
+  </div>
 
   <div class="session-cols">
     <div class="col-block">
