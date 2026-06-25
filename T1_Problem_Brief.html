@@ -17,7 +17,7 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html, body { height: 100%; overflow: hidden; }
     body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--navy); color: var(--white); }
 
     /* ── NAV ── */
@@ -49,10 +49,11 @@
 
     /* ── SECTION BASE ── */
     section {
-      min-height: 100vh; display: flex; flex-direction: column;
-      justify-content: center; padding: 90px 8% 60px;
-      position: relative; overflow: hidden;
+      display: none; flex-direction: column;
+      justify-content: flex-start; padding: 90px 8% 60px;
+      position: fixed; inset: 0; overflow-y: auto;
     }
+    section.active { display: flex; }
 
     /* ── BIG GHOST NUMBER ── */
     .ghost-num {
@@ -215,15 +216,15 @@
   <span class="nav-brand">EGADE · MCP 2026</span>
 
   <div class="nav-sessions">
-    <a href="#cover">Inicio</a>
-    <a href="#prep" class="done">PREP</a>
-    <a href="#s1">Jun 30</a>
-    <a href="#s2">Jul 9</a>
-    <a href="#d1">Ago 3</a>
-    <a href="#d2">Ago 4</a>
-    <a href="#d3">Ago 5</a>
-    <a href="#wp">Work</a>
-    <a href="#post">Post</a>
+    <a href="#" onclick="showSection('cover');return false;" class="active">Inicio</a>
+    <a href="#" onclick="showSection('prep');return false;" class="done">PREP</a>
+    <a href="#" onclick="showSection('s1');return false;">Jun 30</a>
+    <a href="#" onclick="showSection('s2');return false;">Jul 9</a>
+    <a href="#" onclick="showSection('d1');return false;">Ago 3</a>
+    <a href="#" onclick="showSection('d2');return false;">Ago 4</a>
+    <a href="#" onclick="showSection('d3');return false;">Ago 5</a>
+    <a href="#" onclick="showSection('wp');return false;">Work</a>
+    <a href="#" onclick="showSection('post');return false;">Post</a>
   </div>
 
   <div class="lang-toggle">
@@ -235,7 +236,7 @@
 <!-- ══════════════════════════════════
      1. COVER
 ══════════════════════════════════ -->
-<section id="cover">
+<section id="cover" class="active">
   <div class="phase-tag"><span class="dot"></span> Management Consulting Practicum · UT Austin McCombs</div>
   <div class="accent-line"></div>
 
@@ -266,7 +267,6 @@
     </div>
   </div>
 
-  <div class="scroll-hint"><div class="scroll-arrow"></div></div>
 </section>
 
 <!-- ══════════════════════════════════
@@ -338,6 +338,111 @@
       </div>
     </div>
   </div>
+
+  <!-- T2 — STAKEHOLDER INTERVIEW NOTES -->
+  <div id="t2-section" style="margin-top:60px; padding-top:48px; border-top:1px solid rgba(93,224,204,0.15);">
+
+    <div class="phase-tag"><span class="dot"></span><span class="es">Pre-Curso · T2 · Entregable individual</span><span class="en">Pre-Course · T2 · Individual deliverable</span></div>
+    <h2 class="es" style="margin-top:10px;"><em>T2 — Stakeholder Interview Notes</em></h2>
+    <h2 class="en" style="margin-top:10px;"><em>T2 — Stakeholder Interview Notes</em></h2>
+    <div class="accent-line"></div>
+
+    <p class="es" style="font-size:13px; margin-bottom:20px;">Guía de indagación por perfil · Formato <strong>audio WhatsApp</strong> · 2–3 min por pregunta · Objetivo: identificar el crux desde múltiples perspectivas antes de la Sesión 1 (Jun 30).</p>
+    <p class="en" style="font-size:13px; margin-bottom:20px;">Inquiry guide by stakeholder profile · <strong>WhatsApp audio</strong> format · 2–3 min per question · Goal: identify the crux from multiple perspectives before Session 1 (Jun 30).</p>
+
+    <!-- BLOQUE DECANO -->
+    <div class="hard-card" style="margin-bottom:16px;">
+      <h3 class="es">🎓 Decano de Investigación Científica</h3>
+      <h3 class="en">🎓 Dean of Scientific Research</h3>
+      <p class="es" style="font-size:12px; color:var(--teal); margin-bottom:12px;">Enfoque: decisión estratégica · obstáculos institucionales · ventana de acción</p>
+      <p class="en" style="font-size:12px; color:var(--teal); margin-bottom:12px;">Focus: strategic decision · institutional obstacles · window of action</p>
+      <div class="activity-list" style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+        <div style="padding-left:16px; position:relative;">
+          <span style="position:absolute;left:0;color:var(--coral);">1</span>
+          <p class="es" style="margin:0; font-size:14px;">"¿Cuál es hoy el mayor obstáculo para que EGADE tenga una postura institucional clara sobre el uso de IA en investigación?"</p>
+          <p class="en" style="margin:0; font-size:14px;">"What is today the biggest obstacle for EGADE to have a clear institutional position on AI use in research?"</p>
+        </div>
+        <div style="padding-left:16px; position:relative;">
+          <span style="position:absolute;left:0;color:var(--coral);">2</span>
+          <p class="es" style="margin:0; font-size:14px;">"¿Qué tendría que pasar para que esto se convirtiera en una prioridad con presupuesto y responsable asignado?"</p>
+          <p class="en" style="margin:0; font-size:14px;">"What would need to happen for this to become a priority with budget and an assigned owner?"</p>
+        </div>
+        <div style="padding-left:16px; position:relative;">
+          <span style="position:absolute;left:0;color:var(--coral);">3</span>
+          <p class="es" style="margin:0; font-size:14px;">"¿Hay alguna iniciativa similar en otras escuelas de negocio que te parezca un buen referente para EGADE?"</p>
+          <p class="en" style="margin:0; font-size:14px;">"Are there similar initiatives at other business schools that you see as a good reference for EGADE?"</p>
+        </div>
+      </div>
+      <!-- Notes area -->
+      <div style="margin-top:14px; background:rgba(93,224,204,0.04); border:1px dashed rgba(93,224,204,0.2); border-radius:8px; padding:12px;">
+        <p class="es" style="font-size:11px; color:var(--teal); margin-bottom:4px; letter-spacing:1px; text-transform:uppercase;">Insights clave · fecha de entrevista: ___________</p>
+        <p class="en" style="font-size:11px; color:var(--teal); margin-bottom:4px; letter-spacing:1px; text-transform:uppercase;">Key insights · interview date: ___________</p>
+        <p style="font-size:13px; color:var(--dim); font-style:italic;">—</p>
+      </div>
+    </div>
+
+    <!-- BLOQUE DIRECTORES -->
+    <div class="hard-card" style="margin-bottom:16px;">
+      <h3 class="es">👥 Directores de Grupos de Investigación</h3>
+      <h3 class="en">👥 Research Group Directors</h3>
+      <p class="es" style="font-size:12px; color:var(--teal); margin-bottom:12px;">Enfoque: adopción real · fricción operativa · necesidades concretas por disciplina</p>
+      <p class="en" style="font-size:12px; color:var(--teal); margin-bottom:12px;">Focus: actual adoption · operational friction · concrete needs by discipline</p>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="padding-left:16px; position:relative;">
+          <span style="position:absolute;left:0;color:var(--coral);">1</span>
+          <p class="es" style="margin:0; font-size:14px;">"¿Cómo están usando actualmente la IA los investigadores de tu grupo, y qué problemas o inconsistencias estás viendo?"</p>
+          <p class="en" style="margin:0; font-size:14px;">"How are researchers in your group currently using AI, and what problems or inconsistencies are you seeing?"</p>
+        </div>
+        <div style="padding-left:16px; position:relative;">
+          <span style="position:absolute;left:0;color:var(--coral);">2</span>
+          <p class="es" style="margin:0; font-size:14px;">"Si pudieras pedirle a la institución una sola cosa para apoyar la integración responsable de IA en tu grupo, ¿qué sería?"</p>
+          <p class="en" style="margin:0; font-size:14px;">"If you could ask the institution for one thing to support responsible AI integration in your group, what would it be?"</p>
+        </div>
+        <div style="padding-left:16px; position:relative;">
+          <span style="position:absolute;left:0;color:var(--coral);">3</span>
+          <p class="es" style="margin:0; font-size:14px;">"¿Cómo está afectando esto las decisiones de dónde y cómo publicar?"</p>
+          <p class="en" style="margin:0; font-size:14px;">"How is this affecting decisions about where and how to publish?"</p>
+        </div>
+      </div>
+      <div style="margin-top:14px; background:rgba(93,224,204,0.04); border:1px dashed rgba(93,224,204,0.2); border-radius:8px; padding:12px;">
+        <p class="es" style="font-size:11px; color:var(--teal); margin-bottom:4px; letter-spacing:1px; text-transform:uppercase;">Insights clave · fecha de entrevista: ___________</p>
+        <p class="en" style="font-size:11px; color:var(--teal); margin-bottom:4px; letter-spacing:1px; text-transform:uppercase;">Key insights · interview date: ___________</p>
+        <p style="font-size:13px; color:var(--dim); font-style:italic;">—</p>
+      </div>
+    </div>
+
+    <!-- BLOQUE INVESTIGADORES -->
+    <div class="hard-card" style="margin-bottom:16px;">
+      <h3 class="es">🔬 Investigadores</h3>
+      <h3 class="en">🔬 Researchers</h3>
+      <p class="es" style="font-size:12px; color:var(--teal); margin-bottom:12px;">Enfoque: práctica individual · barreras reales · necesidades de capacitación y claridad</p>
+      <p class="en" style="font-size:12px; color:var(--teal); margin-bottom:12px;">Focus: individual practice · real barriers · training and clarity needs</p>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="padding-left:16px; position:relative;">
+          <span style="position:absolute;left:0;color:var(--coral);">1</span>
+          <p class="es" style="margin:0; font-size:14px;">"¿Estás usando alguna herramienta de IA en tu investigación? ¿Qué te frena de usarla más o de forma más sistemática?"</p>
+          <p class="en" style="margin:0; font-size:14px;">"Are you using any AI tools in your research? What's stopping you from using them more or more systematically?"</p>
+        </div>
+        <div style="padding-left:16px; position:relative;">
+          <span style="position:absolute;left:0;color:var(--coral);">2</span>
+          <p class="es" style="margin:0; font-size:14px;">"¿Sabes qué permiten o prohíben los journals donde publicas respecto al uso de IA? ¿Tienes claridad institucional sobre eso?"</p>
+          <p class="en" style="margin:0; font-size:14px;">"Do you know what your target journals allow or prohibit regarding AI use? Do you have institutional guidance on that?"</p>
+        </div>
+        <div style="padding-left:16px; position:relative;">
+          <span style="position:absolute;left:0;color:var(--coral);">3</span>
+          <p class="es" style="margin:0; font-size:14px;">"¿Qué tipo de capacitación o guía necesitarías para sentirte seguro usando IA sin comprometer la integridad de tu investigación?"</p>
+          <p class="en" style="margin:0; font-size:14px;">"What kind of training or guidance would you need to feel confident using AI without compromising your research integrity?"</p>
+        </div>
+      </div>
+      <div style="margin-top:14px; background:rgba(93,224,204,0.04); border:1px dashed rgba(93,224,204,0.2); border-radius:8px; padding:12px;">
+        <p class="es" style="font-size:11px; color:var(--teal); margin-bottom:4px; letter-spacing:1px; text-transform:uppercase;">Insights clave · fecha de entrevista: ___________</p>
+        <p class="en" style="font-size:11px; color:var(--teal); margin-bottom:4px; letter-spacing:1px; text-transform:uppercase;">Key insights · interview date: ___________</p>
+        <p style="font-size:13px; color:var(--dim); font-style:italic;">—</p>
+      </div>
+    </div>
+
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════
@@ -657,17 +762,19 @@
     event.target.classList.add('active');
   }
 
-  // Active nav on scroll
-  const secs = document.querySelectorAll('section');
-  const links = document.querySelectorAll('.nav-sessions a');
-  window.addEventListener('scroll', () => {
-    let cur = '';
-    secs.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
-    links.forEach(a => {
-      a.classList.remove('active');
-      if (a.getAttribute('href') === '#' + cur) a.classList.add('active');
+  function showSection(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.nav-sessions a').forEach(a => a.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    // Scroll section to top
+    document.getElementById(id).scrollTop = 0;
+    // Mark nav link active (keeping 'done' class)
+    document.querySelectorAll('.nav-sessions a').forEach(a => {
+      if (a.getAttribute('onclick') && a.getAttribute('onclick').includes("'" + id + "'")) {
+        a.classList.add('active');
+      }
     });
-  });
+  }
 </script>
 </body>
 </html>
