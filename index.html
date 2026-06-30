@@ -232,7 +232,7 @@
   <div class="nav-sessions">
     <a href="#" onclick="showSection('cover');return false;" class="active">Inicio</a>
     <a href="#" onclick="showSection('prep');return false;" class="done">PREP</a>
-    <a href="#" onclick="showSection('s1');return false;">Jun 30</a>
+    <a href="#" onclick="showSection('s1');return false;" class="done">Jun 30</a>
     <a href="#" onclick="showSection('s2');return false;">Jul 9</a>
     <a href="#" onclick="showSection('d1');return false;">Ago 3</a>
     <a href="#" onclick="showSection('d2');return false;">Ago 4</a>
@@ -719,7 +719,7 @@
 <!-- ══════════════════════════════════
      3. SESIÓN 1 — Jun 30
 ══════════════════════════════════ -->
-<section id="s1" class="locked">
+<section id="s1">
   <span class="ghost-num">S1</span>
   <div class="phase-tag coral"><span class="dot"></span><span class="es">Sesión 1 · Virtual · Zoom · 3 horas</span><span class="en">Session 1 · Virtual · Zoom · 3 hours</span></div>
   <div class="date-badge coral">Jun 30 · 9am–12pm MX</div>
@@ -766,8 +766,141 @@
     </div>
   </div>
 
-  <div class="placeholder es">Notas y reflexiones de la sesión se agregarán aquí después del 30 de junio.</div>
-  <div class="placeholder en">Session notes and reflections will be added here after June 30.</div>
+  <!-- T5 — JTBD & ROLE MAP -->
+  <div style="margin-top:60px; padding-top:48px; border-top:1px solid rgba(93,224,204,0.15);">
+    <div class="phase-tag coral"><span class="dot"></span><span class="es">Sesión 1 · T5 · Entregable individual</span><span class="en">Session 1 · T5 · Individual deliverable</span></div>
+    <h2 class="es" style="margin-top:10px;"><em>T5 — JTBD &amp; Role Map</em></h2>
+    <h2 class="en" style="margin-top:10px;"><em>T5 — JTBD &amp; Role Map</em></h2>
+    <div class="accent-line"></div>
+    <p class="es" style="font-size:13px; color:var(--dim); margin-bottom:28px;">Clarifica qué necesita realmente hacer el cliente (Job To Be Done) y qué roles de consultoría son más relevantes para este engagement.</p>
+    <p class="en" style="font-size:13px; color:var(--dim); margin-bottom:28px;">Clarifies what the client really needs to get done (Job To Be Done) and which consulting roles are most relevant for this engagement.</p>
+
+    <div style="display:flex; flex-direction:column; gap:16px;">
+
+      <!-- 1. CLIENT / UNIT -->
+      <div class="hard-card">
+        <p style="font-size:10px; color:var(--teal); letter-spacing:1px; text-transform:uppercase; margin-bottom:10px;">1. <span class="es">Cliente / Unidad</span><span class="en">Client / Unit</span></p>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <div style="display:flex; gap:10px; align-items:baseline;">
+            <span style="font-size:11px; color:var(--teal); font-weight:700; min-width:120px;" class="es">Organización:</span>
+            <span style="font-size:11px; color:var(--teal); font-weight:700; min-width:120px;" class="en">Organization:</span>
+            <span style="font-size:13px; color:var(--light);">Tecnológico de Monterrey</span>
+          </div>
+          <div style="display:flex; gap:10px; align-items:baseline;">
+            <span style="font-size:11px; color:var(--teal); font-weight:700; min-width:120px;" class="es">Área / Unidad:</span>
+            <span style="font-size:11px; color:var(--teal); font-weight:700; min-width:120px;" class="en">Department / Unit:</span>
+            <span style="font-size:13px; color:var(--light);" class="es">Escuela de Negocios — Área de Investigación Científica</span>
+            <span style="font-size:13px; color:var(--light);" class="en">Escuela de Negocios — Scientific Research Area</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. JTBD -->
+      <div class="hard-card">
+        <p style="font-size:10px; color:var(--teal); letter-spacing:1px; text-transform:uppercase; margin-bottom:12px;">2. Job To Be Done (JTBD)</p>
+        <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">
+          <div style="padding:10px 14px; background:rgba(93,224,204,0.06); border-left:3px solid var(--teal); border-radius:0 6px 6px 0;">
+            <p style="font-size:10px; color:var(--teal); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;" class="es">Job Funcional — la tarea práctica</p>
+            <p style="font-size:10px; color:var(--teal); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;" class="en">Functional Job — the practical task</p>
+            <p style="font-size:13px; color:var(--light); line-height:1.6; margin:0;" class="es">Definir e implementar un marco ético-normativo institucional que regule el uso de IA en investigación científica.</p>
+            <p style="font-size:13px; color:var(--light); line-height:1.6; margin:0;" class="en">Define and implement an institutional ethical-normative framework that governs AI use in scientific research.</p>
+          </div>
+          <div style="padding:10px 14px; background:rgba(93,224,204,0.06); border-left:3px solid rgba(93,224,204,0.4); border-radius:0 6px 6px 0;">
+            <p style="font-size:10px; color:var(--teal); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;" class="es">Job Emocional — cómo quiere sentirse el cliente</p>
+            <p style="font-size:10px; color:var(--teal); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;" class="en">Emotional Job — how the client wants to feel</p>
+            <p style="font-size:13px; color:var(--light); line-height:1.6; margin:0;" class="es">Seguro y respaldado institucionalmente: que los investigadores usen IA sin miedo a sanciones o a comprometer su integridad académica.</p>
+            <p style="font-size:13px; color:var(--light); line-height:1.6; margin:0;" class="en">Safe and institutionally backed: researchers using AI without fear of sanctions or compromising academic integrity.</p>
+          </div>
+          <div style="padding:10px 14px; background:rgba(93,224,204,0.06); border-left:3px solid rgba(93,224,204,0.25); border-radius:0 6px 6px 0;">
+            <p style="font-size:10px; color:var(--teal); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;" class="es">Job Social — cómo quiere ser percibido</p>
+            <p style="font-size:10px; color:var(--teal); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;" class="en">Social Job — how the client wants to be perceived</p>
+            <p style="font-size:13px; color:var(--light); line-height:1.6; margin:0;" class="es">Reconocido como referente en uso responsable de IA en investigación académica en América Latina.</p>
+            <p style="font-size:13px; color:var(--light); line-height:1.6; margin:0;" class="en">Recognized as a Latin American reference in responsible AI use for academic research.</p>
+          </div>
+        </div>
+        <!-- JTBD sentence -->
+        <div style="background:rgba(242,82,76,0.07); border:1px solid rgba(242,82,76,0.2); border-radius:8px; padding:14px 18px;">
+          <p style="font-size:10px; color:var(--coral); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; font-weight:700;">JTBD Statement</p>
+          <p style="font-size:14px; color:var(--light); line-height:1.8; margin:0; font-style:italic;" class="es">"Nuestro cliente necesita <strong>establecer un marco institucional de gobernanza de IA</strong> para que los investigadores puedan adoptar IA de forma sistemática y con confianza, posicionando a la Escuela como referente latinoamericano en uso académico responsable."</p>
+          <p style="font-size:14px; color:var(--light); line-height:1.8; margin:0; font-style:italic;" class="en">"Our client needs to <strong>establish an institutional AI governance framework</strong> so that researchers can adopt AI systematically and confidently, positioning the School as a Latin American reference in responsible academic AI use."</p>
+        </div>
+      </div>
+
+      <!-- 3. CRUX -->
+      <div class="hard-card">
+        <p style="font-size:10px; color:var(--teal); letter-spacing:1px; text-transform:uppercase; margin-bottom:10px;">3. <span class="es">Crux (del T4 — Crux Finder)</span><span class="en">Crux (from T4 — Crux Finder)</span></p>
+        <p style="font-size:13px; color:var(--dim); margin-bottom:10px;" class="es">El obstáculo más crítico que bloquea el JTBD:</p>
+        <p style="font-size:13px; color:var(--dim); margin-bottom:10px;" class="en">The hardest, highest-leverage obstacle blocking the JTBD:</p>
+        <div style="background:rgba(242,82,76,0.07); border:1px dashed rgba(242,82,76,0.3); border-radius:8px; padding:12px 16px;">
+          <p style="font-size:13px; color:var(--light); line-height:1.7; margin:0;" class="es">La <strong>ausencia de un marco ético-normativo institucional</strong> — sin él, los investigadores no distinguen uso legítimo de riesgo real, se autoprotegen, y el uso de IA queda truncado en tareas periféricas.</p>
+          <p style="font-size:13px; color:var(--light); line-height:1.7; margin:0;" class="en">The <strong>absence of an institutional ethical-normative framework</strong> — without it, researchers cannot distinguish legitimate use from real risk, self-protect conservatively, and AI use remains truncated to peripheral tasks.</p>
+        </div>
+      </div>
+
+      <!-- 4. ROLES -->
+      <div class="hard-card">
+        <p style="font-size:10px; color:var(--teal); letter-spacing:1px; text-transform:uppercase; margin-bottom:12px;">4. <span class="es">Roles de Consultoría</span><span class="en">Consulting Roles</span></p>
+
+        <!-- Role cards -->
+        <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">
+
+          <!-- Collaborator — DOMINANT -->
+          <div style="border:1px solid rgba(93,224,204,0.5); border-radius:10px; padding:14px 18px; background:rgba(93,224,204,0.07); position:relative;">
+            <div style="position:absolute; top:12px; right:14px; background:var(--coral); color:#fff; font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:3px 8px; border-radius:4px;" class="es">★ Rol dominante</div>
+            <div style="position:absolute; top:12px; right:14px; background:var(--coral); color:#fff; font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:3px 8px; border-radius:4px;" class="en">★ Dominant role</div>
+            <p style="font-size:13px; font-weight:700; color:var(--teal); margin-bottom:6px;">Collaborator</p>
+            <p style="font-size:12px; color:var(--dim); line-height:1.6; margin-bottom:8px;" class="es">Construye la solución <em>junto con</em> el cliente — sin imponer respuestas.</p>
+            <p style="font-size:12px; color:var(--dim); line-height:1.6; margin-bottom:8px;" class="en">Builds the solution <em>alongside</em> the client — without imposing answers.</p>
+            <p style="font-size:13px; color:var(--light); line-height:1.7; margin:0;" class="es"><strong>¿Por qué?</strong> El marco ético-normativo debe ser co-construido con investigadores, Directores y el Decano. Un framework impuesto desde afuera no tendrá adopción. El Decano necesita apropiarse del proceso — y eso requiere que el consultor construya con él, no para él. El caso de Jairo lo confirma: el uso profundo de IA emergió de autonomía individual, no de instrucción top-down.</p>
+            <p style="font-size:13px; color:var(--light); line-height:1.7; margin:0;" class="en"><strong>Why?</strong> The ethical-normative framework must be co-built with researchers, Directors, and the Dean. A framework imposed from outside will not be adopted. The Dean needs to own the process — which requires the consultant to build with him, not for him. Jairo's case confirms it: deep AI use emerged from individual autonomy, not top-down instruction.</p>
+          </div>
+
+          <!-- Expert — secondary -->
+          <div style="border:1px solid rgba(240,192,64,0.35); border-radius:10px; padding:14px 18px; background:rgba(240,192,64,0.05);">
+            <p style="font-size:13px; font-weight:700; color:var(--gold); margin-bottom:6px;">Expert <span style="font-size:11px; font-weight:400; color:var(--dim);" class="es">— secundario</span><span style="font-size:11px; font-weight:400; color:var(--dim);" class="en">— secondary</span></p>
+            <p style="font-size:12px; color:var(--dim); line-height:1.6; margin-bottom:8px;" class="es">Aporta conocimiento que el cliente no tiene.</p>
+            <p style="font-size:12px; color:var(--dim); line-height:1.6; margin-bottom:8px;" class="en">Brings knowledge the client does not have.</p>
+            <p style="font-size:13px; color:var(--light); line-height:1.7; margin:0;" class="es"><strong>¿Por qué?</strong> El Decano no conoce las políticas actualizadas de los journals, ni benchmarks de otras escuelas de negocios, ni el paper de Aguinis (Springer 2026). El consultor aporta ese conocimiento externo para anclar las conversaciones con evidencia — pero siempre dentro de un proceso colaborativo.</p>
+            <p style="font-size:13px; color:var(--light); line-height:1.7; margin:0;" class="en"><strong>Why?</strong> The Dean does not know current journal policies, benchmarks from peer schools, or the Aguinis paper (Springer 2026). The consultant brings that external knowledge to anchor conversations with evidence — but always within a collaborative process.</p>
+          </div>
+
+          <!-- Pair of Hands — not applicable -->
+          <div style="border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:12px 18px; background:rgba(255,255,255,0.02); opacity:0.45;">
+            <p style="font-size:13px; font-weight:700; color:var(--dim); margin-bottom:4px;">Pair of Hands <span style="font-size:11px; font-weight:400;" class="es">— no aplica</span><span style="font-size:11px; font-weight:400;" class="en">— not applicable</span></p>
+            <p style="font-size:12px; color:var(--dim); line-height:1.6; margin:0;" class="es">Requiere que el cliente tenga una hoja de ruta definida. Aquí no existe — ese es precisamente el problema.</p>
+            <p style="font-size:12px; color:var(--dim); line-height:1.6; margin:0;" class="en">Requires the client to have a defined roadmap. That doesn't exist here — that is precisely the problem.</p>
+          </div>
+
+          <!-- Facilitator — not applicable -->
+          <div style="border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:12px 18px; background:rgba(255,255,255,0.02); opacity:0.45;">
+            <p style="font-size:13px; font-weight:700; color:var(--dim); margin-bottom:4px;">Process Facilitator <span style="font-size:11px; font-weight:400;" class="es">— no aplica como dominante</span><span style="font-size:11px; font-weight:400;" class="en">— not applicable as dominant</span></p>
+            <p style="font-size:12px; color:var(--dim); line-height:1.6; margin:0;" class="es">Solo facilitar no es suficiente dado el nivel de ambigüedad. El problema requiere conocimiento externo para poder estructurarse.</p>
+            <p style="font-size:12px; color:var(--dim); line-height:1.6; margin:0;" class="en">Facilitation alone is not enough given the ambiguity level. The problem requires external knowledge to structure the conversation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. CONTEXT & CHALLENGE STATEMENT -->
+      <div class="hard-card">
+        <p style="font-size:10px; color:var(--teal); letter-spacing:1px; text-transform:uppercase; margin-bottom:12px;">5. <span class="es">Contexto y Enunciado del Reto</span><span class="en">Context and Challenge Statement</span></p>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="padding:12px 16px; background:rgba(93,224,204,0.05); border-radius:8px; border:1px solid rgba(93,224,204,0.15);">
+            <p style="font-size:10px; color:var(--teal); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px;" class="es">Enunciado de contexto</p>
+            <p style="font-size:10px; color:var(--teal); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px;" class="en">Context statement</p>
+            <p style="font-size:13px; color:var(--light); line-height:1.7; margin:0;" class="es">La Escuela de Negocios enfrenta presión creciente para integrar IA en investigación, con 6 investigadores usándola de forma individual sin marco ni política institucional, mientras los journals actualizan sus políticas y los competidores avanzan.</p>
+            <p style="font-size:13px; color:var(--light); line-height:1.7; margin:0;" class="en">The Escuela de Negocios faces growing pressure to integrate AI into research, with 6 researchers using it individually without institutional framework or policy, while journals update their policies and competitors advance.</p>
+          </div>
+          <div style="padding:12px 16px; background:rgba(242,82,76,0.06); border-radius:8px; border:1px solid rgba(242,82,76,0.2);">
+            <p style="font-size:10px; color:var(--coral); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px;" class="es">Enunciado del reto</p>
+            <p style="font-size:10px; color:var(--coral); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px;" class="en">Challenge statement</p>
+            <p style="font-size:14px; color:var(--light); line-height:1.8; margin:0; font-style:italic;" class="es">"¿Cómo podríamos diseñar un marco de gobernanza de IA que dé a los investigadores claridad y confianza para usar IA con rigor, sin esperar un consenso externo que quizás nunca llegue?"</p>
+            <p style="font-size:14px; color:var(--light); line-height:1.8; margin:0; font-style:italic;" class="en">"How might we design an AI governance framework that gives researchers clarity and confidence to use AI rigorously, without waiting for external consensus that may never arrive?"</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- fin flex column -->
+  </div><!-- fin T5 -->
 </section>
 
 <!-- ══════════════════════════════════
