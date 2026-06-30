@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T4 Crux Finder — Claudia Álvarez</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #f0f0ee; font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 32px 20px; min-height: 100vh; }
+.controls { margin-bottom: 20px; display: flex; gap: 12px; }
+.btn { padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer; border: none; }
+.btn-print { background: #0D1B35; color: #fff; }
+.btn-back { background: #fff; color: #0D1B35; border: 1px solid #0D1B35; text-decoration: none; display: inline-flex; align-items: center; }
+@media print {
+  body { padding: 0; background: #fff; }
+  .controls { display: none; }
+  .slide { border: none !important; box-shadow: none !important; }
+}
+.slide { background: #fff; width: 100%; max-width: 780px; border: 0.5px solid #ccc; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.top-bar { background: #0D1B35; height: 6px; }
+.header { padding: 18px 30px 14px; border-bottom: 1.5px solid #0D1B35; }
+.eyebrow { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: #8FA3B5; margin-bottom: 6px; }
+.action-title { font-size: 15px; font-weight: 700; color: #0D1B35; line-height: 1.4; }
+.action-title em { color: #F2524C; font-style: normal; }
+.body { padding: 16px 30px 12px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.section-label { font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; color: #5DE0CC; font-weight: 700; border-bottom: 1px solid rgba(93,224,204,0.25); padding-bottom: 4px; margin-bottom: 10px; }
+.bb strong { font-size: 11px; color: #0D1B35; display: block; margin-bottom: 8px; line-height: 1.4; padding-left: 8px; border-left: 2px solid #0D1B35; }
+.ambition-box { background: #f7f7f5; border-left: 3px solid #0D1B35; padding: 9px 11px; font-size: 11px; color: #0D1B35; line-height: 1.5; font-style: italic; }
+.obs { border: 0.5px solid #ddd; border-radius: 3px; padding: 8px 10px; margin-bottom: 8px; }
+.obs.crux { border-color: #F2524C; background: #fff8f7; }
+.obs-tag { font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: #999; margin-bottom: 3px; }
+.obs-tag.crux-tag { color: #F2524C; font-weight: 700; }
+.obs-name { font-size: 10px; font-weight: 700; color: #0D1B35; line-height: 1.3; margin-bottom: 4px; }
+.obs.crux .obs-name { color: #F2524C; }
+.obs-scores { font-size: 9px; color: #888; }
+.obs-scores span { font-weight: 700; color: #0D1B35; }
+.crux-row { grid-column: 1 / -1; background: #0D1B35; padding: 12px 16px; border-radius: 3px; }
+.crux-label { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: #5DE0CC; margin-bottom: 6px; }
+.crux-statement { font-size: 12px; color: #fff; line-height: 1.7; }
+.crux-statement strong { color: #F2524C; }
+.crux-statement em { color: #5DE0CC; font-style: normal; }
+.wi-row { display: flex; gap: 7px; align-items: flex-start; margin-bottom: 6px; }
+.wi-dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 3px; flex-shrink: 0; }
+.wi-text { font-size: 10px; color: #555; line-height: 1.4; }
+.wi-text strong { color: #0D1B35; }
+.footer { padding: 8px 30px; border-top: 0.5px solid #ddd; display: flex; justify-content: space-between; }
+.footer span { font-size: 8px; color: #aaa; }
+</style>
+</head>
+<body>
+
+<div class="controls">
+  <a class="btn btn-back" href="index.html">← Volver al portafolio</a>
+  <button class="btn btn-print" onclick="window.print()">Imprimir / Guardar como PDF</button>
+</div>
+
+<div class="slide">
+  <div class="top-bar"></div>
+  <div class="header">
+    <div class="eyebrow">MCP UT Austin · PREP · T4 — Crux Finder · Claudia Álvarez · Jun 30, 2026</div>
+    <div class="action-title">La Escuela de Negocios no puede integrar IA en investigación porque <em>ningún investigador sabe qué está institucionalmente permitido</em></div>
+  </div>
+  <div class="body">
+
+    <div>
+      <div class="section-label">Situación · Ambición</div>
+      <div class="bb">
+        <strong>Los investigadores ya usan IA — pero solos y con miedo.</strong>
+        <strong>Los journals evolucionan; la institución, no.</strong>
+      </div>
+      <div class="ambition-box">"Nuestro cliente quiere que los investigadores integren IA de forma sistemática y ética, posicionando a la Escuela como referente en América Latina."</div>
+    </div>
+
+    <div>
+      <div class="section-label">Obstáculos (Signif. · Accion.)</div>
+      <div class="obs crux">
+        <div class="obs-tag crux-tag">★ Hipótesis Crux</div>
+        <div class="obs-name">Ausencia de marco ético-normativo institucional</div>
+        <div class="obs-scores">Signif. <span>5/5</span> · Accion. <span>4/5</span></div>
+      </div>
+      <div class="obs">
+        <div class="obs-tag">Obstáculo 2</div>
+        <div class="obs-name">Falta de capacitación específica y accionable</div>
+        <div class="obs-scores">Signif. <span>4/5</span> · Accion. <span>5/5</span></div>
+      </div>
+      <div class="obs">
+        <div class="obs-tag">Obstáculo 3</div>
+        <div class="obs-name">Políticas de journals sin monitoreo institucional</div>
+        <div class="obs-scores">Signif. <span>4/5</span> · Accion. <span>3/5</span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">¿Qué cambiaría la hipótesis?</div>
+      <div class="wi-row"><div class="wi-dot" style="background:#F2524C"></div><div class="wi-text">Si el Decano actúa con cautela deliberada por acreditación → crux se desplaza a <strong>gestión de riesgo</strong></div></div>
+      <div class="wi-row"><div class="wi-dot" style="background:#F0C040"></div><div class="wi-text">Si Directores señalan sobrecarga de trabajo → crux podría ser de <strong>capacidad</strong></div></div>
+      <div class="wi-row"><div class="wi-dot" style="background:#5DE0CC"></div><div class="wi-text">Si journals evolucionan más rápido que la institución → crux sería <strong>externo e inaccionable</strong></div></div>
+    </div>
+
+    <div class="crux-row">
+      <div class="crux-label">Draft Crux Statement</div>
+      <div class="crux-statement">El crux es la <strong>ausencia de un marco ético-normativo institucional</strong>, <em>porque</em> sin él los investigadores no distinguen uso legítimo de riesgo real — <em>lo que significa</em> que se autoprotegen, el uso de IA queda en tareas periféricas y la Escuela pierde el liderazgo en el campo.</div>
+    </div>
+
+  </div>
+  <div class="footer">
+    <span>Fuentes: Entrevistas investigadores n=6, Jun 25–29 2026 · Aguinis et al., Springer 2026</span>
+    <span>Escuela de Negocios · Tecnológico de Monterrey</span>
+  </div>
+</div>
+
+</body>
+</html>
