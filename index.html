@@ -39,6 +39,7 @@
     .nav-sessions a:hover { color: var(--white); border-color: rgba(93,224,204,0.3); }
     .nav-sessions a.active { background: var(--teal); color: var(--navy); font-weight: 700; border-color: var(--teal); }
     .nav-sessions a.done { color: var(--teal); }
+    .nav-sessions a.done.active { color: var(--navy); }
 
     .lang-toggle { display: flex; border: 1px solid var(--teal); border-radius: 16px; overflow: hidden; flex-shrink: 0; }
     .lang-toggle button {
@@ -235,7 +236,7 @@
     <a href="#" onclick="showSection('s1');return false;" class="done">Jun 30</a>
     <a href="#" onclick="showSection('s2');return false;" class="done">Jul 9</a>
     <a href="#" onclick="showSection('d1');return false;" class="done">Ago 3</a>
-    <a href="#" onclick="showSection('d2');return false;">Ago 4</a>
+    <a href="#" onclick="showSection('d2');return false;" class="done">Ago 4</a>
     <a href="#" onclick="showSection('d3');return false;">Ago 5</a>
     <a href="#" onclick="showSection('wp');return false;">Work</a>
     <a href="#" onclick="showSection('post');return false;">Post</a>
@@ -2084,19 +2085,13 @@
 <!-- ══════════════════════════════════
      6. DÍA 2 — Ago 4
 ══════════════════════════════════ -->
-<section id="d2" class="locked">
+<section id="d2">
   <span class="ghost-num">D2</span>
   <div class="phase-tag gold"><span class="dot"></span><span class="es">Día 2 · Presencial · 8 horas</span><span class="en">Day 2 · In-person · 8 hours</span></div>
   <div class="date-badge gold">Ago 4 · 8am–6pm MX</div>
 
   <h2 class="es">Analysis Deck <em>e Indagación Profunda</em></h2>
   <h2 class="en">Analysis Deck <em>and Deep Inquiry</em></h2>
-
-  <div class="lock-msg">
-    <span class="lock-icon">🔒</span>
-    <p class="es">Contenido disponible después del 4 de agosto.</p>
-    <p class="en">Content available after August 4.</p>
-  </div>
 
   <div class="session-cols">
     <div class="col-block">
@@ -2117,13 +2112,122 @@
       <h3 class="es">Entregables</h3>
       <h3 class="en">Deliverables</h3>
       <div class="deliverables">
-        <div class="deliv-item"><div class="deliv-check"></div><div class="deliv-text"><strong>T16 — Analysis Deck</strong><br><span class="es">~12–15 slides: contexto, diagnósticos (BoT, BMC, objetivos, estrategia), crux, drivers, temas de solución</span><span class="en">~12–15 slides: context, diagnostics (BoT, BMC, objectives, strategy), crux, drivers, solution themes</span></div></div>
+        <div class="deliv-item"><div class="deliv-check done"></div><div class="deliv-text"><strong>T16 — Analysis Deck</strong><br><span class="es">~12–15 slides: contexto, diagnósticos (BoT, BMC, objetivos, estrategia), crux, drivers, temas de solución</span><span class="en">~12–15 slides: context, diagnostics (BoT, BMC, objectives, strategy), crux, drivers, solution themes</span></div></div>
       </div>
     </div>
   </div>
 
-  <div class="placeholder es">Notas y entregables se agregarán aquí después del 4 de agosto.</div>
-  <div class="placeholder en">Notes and deliverables will be added here after August 4.</div>
+  <div class="placeholder es">Borrador de preparación construido antes de la sesión presencial (8am–6pm) — ghost outline con titulares de prueba, para refinar en vivo con la indagación profunda y el guest del Tec.</div>
+  <div class="placeholder en">Preparation draft built ahead of the in-person session (8am–6pm) — ghost-outline headlines to pressure-test live with deep inquiry and the Tec guest.</div>
+
+  <!-- T16 — ANALYSIS DECK (GHOST OUTLINE) -->
+  <div style="margin-top:60px; padding-top:48px; border-top:1px solid rgba(240,192,64,0.2);">
+    <div class="phase-tag gold"><span class="dot"></span><span class="es">Día 2 · T16 · Entregable individual</span><span class="en">Day 2 · T16 · Individual deliverable</span></div>
+    <h2 class="es" style="margin-top:10px;"><em>T16 — Analysis Deck (Ghost Outline)</em></h2>
+    <h2 class="en" style="margin-top:10px;"><em>T16 — Analysis Deck (Ghost Outline)</em></h2>
+    <div class="accent-line"></div>
+    <p class="es" style="font-size:13px; color:var(--dim); margin-bottom:14px;">Antes de construir el contenido de cada slide, se redacta primero el titular de las doce slides del Analysis Deck. Cada titular debe ser una oración completa y afirmativa que comunique un argumento por sí sola, nunca una etiqueta de tema. Este ghost outline se construye con la evidencia reunida en T1 a T15. El deck final, de doce a quince slides, se completa en vivo durante el Día 2 con el cuerpo de cada slide, los exhibits de respaldo y los hallazgos de la indagación profunda.</p>
+    <p class="en" style="font-size:13px; color:var(--dim); margin-bottom:28px;">Before building any slide body, the headline for all twelve Analysis Deck slides is drafted first. Every headline must be a complete, assertive sentence that communicates an argument on its own, never a topic label. This ghost outline is built from the evidence gathered in T1–T15. The final deck, twelve to fifteen slides, is completed live during Day 2 with each slide's body, supporting exhibits, and the day's deep-inquiry findings.</p>
+
+    <div style="display:flex; flex-direction:column; gap:16px;">
+
+      <!-- HEADLINE QUALITY TEST -->
+      <div class="hard-card">
+        <p style="font-size:10px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:10px; font-weight:700;" class="es">Prueba de Calidad del Titular</p>
+        <p style="font-size:10px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:10px; font-weight:700;" class="en">Headline Quality Test</p>
+        <p style="font-size:13px; color:var(--light); line-height:1.7; margin:0;" class="es">Se tapa el cuerpo de la slide. ¿El titular por sí solo comunica el insight? Si un cliente leyera solo los titulares en secuencia, ¿entendería el argumento completo? Si la respuesta es no, el titular se reescribe.</p>
+        <p style="font-size:13px; color:var(--light); line-height:1.7; margin:0;" class="en">Cover the body of the slide. Does the headline alone communicate the insight? If a client read only the headlines in sequence, would they understand the complete argument? If not, rewrite the headline.</p>
+      </div>
+
+      <!-- GHOST OUTLINE TABLE -->
+      <div class="hard-card">
+        <p style="font-size:10px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:12px; font-weight:700;" class="es">Ghost Outline — Analysis Deck (12 slides núcleo, de 12–15 en el deck final)</p>
+        <p style="font-size:10px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:12px; font-weight:700;" class="en">Ghost Outline — Analysis Deck (12 core slides, of 12–15 in the final deck)</p>
+        <div style="overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; font-size:12px;">
+            <thead>
+              <tr style="background:rgba(240,192,64,0.08); color:var(--gold);">
+                <th style="padding:8px 10px; text-align:center; border-bottom:1px solid rgba(240,192,64,0.25); width:5%;">#</th>
+                <th style="padding:8px 10px; text-align:left; border-bottom:1px solid rgba(240,192,64,0.25); width:22%;" class="es">Sección</th><th style="padding:8px 10px; text-align:left; border-bottom:1px solid rgba(240,192,64,0.25); width:22%;" class="en">Section</th>
+                <th style="padding:8px 10px; text-align:left; border-bottom:1px solid rgba(240,192,64,0.25);" class="es">Titular (oración completa y afirmativa)</th><th style="padding:8px 10px; text-align:left; border-bottom:1px solid rgba(240,192,64,0.25);" class="en">Headline (complete, assertive sentence)</th>
+              </tr>
+            </thead>
+            <tbody style="color:var(--light);">
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                <td style="padding:8px 10px; text-align:center; color:var(--dim);">1</td>
+                <td style="padding:8px 10px;" class="es">Título del proyecto y contexto del cliente</td><td style="padding:8px 10px;" class="en">Project title & client context</td>
+                <td style="padding:8px 10px;" class="es">El Decano de Investigación Científica encargó este diagnóstico porque la adopción de IA en investigación avanza sin gobernanza, presupuesto ni dueño institucional.</td><td style="padding:8px 10px;" class="en">The Dean of Scientific Research commissioned this diagnostic because AI adoption in research is advancing without governance, budget, or an institutional owner.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05); background:rgba(255,255,255,0.02);">
+                <td style="padding:8px 10px; text-align:center; color:var(--dim);">2</td>
+                <td style="padding:8px 10px;" class="es">Resumen ejecutivo (situación, complicación, resolución)</td><td style="padding:8px 10px;" class="en">Executive summary (situation–complication–resolution)</td>
+                <td style="padding:8px 10px;" class="es">La Escuela ganó la carrera de IA en docencia, pero dejó la investigación sin estrategia, y hoy dos grupos de investigadores requieren respuestas distintas entre sí.</td><td style="padding:8px 10px;" class="en">The School won the AI race in teaching but left research without a strategy, and today two groups of researchers require different responses.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                <td style="padding:8px 10px; text-align:center; color:var(--dim);">3</td>
+                <td style="padding:8px 10px;" class="es">Cómo ha cambiado el foco de la institución (hallazgo BoT)</td><td style="padding:8px 10px;" class="en">How the organization's focus has shifted (BoT finding)</td>
+                <td style="padding:8px 10px;" class="es">Desde 2024, el apoyo institucional a la IA se disparó en docencia, mientras la gobernanza de IA en investigación se mantuvo plana, y la brecha entre ambas se amplía cada año.</td><td style="padding:8px 10px;" class="en">Since 2024, institutional support for AI has surged in teaching while research-AI governance stayed flat, and the gap between them widens every year.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05); background:rgba(255,255,255,0.02);">
+                <td style="padding:8px 10px; text-align:center; color:var(--dim);">4</td>
+                <td style="padding:8px 10px;" class="es">Cómo opera hoy la institución (modelo operativo)</td><td style="padding:8px 10px;" class="en">How the organization currently operates (operating model)</td>
+                <td style="padding:8px 10px;" class="es">El modelo operativo actual da a la IA en investigación autoservicio total, sin dueño, sin canal y sin línea de presupuesto. Todo lo que existe hoy, TECgpt, política, CADI, se construyó para docencia.</td><td style="padding:8px 10px;" class="en">The current operating model leaves research AI fully self-service, with no owner, no channel, and no budget line. Everything that exists today, TECgpt, policy, CADI, was built for teaching.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                <td style="padding:8px 10px; text-align:center; color:var(--dim);">5</td>
+                <td style="padding:8px 10px;" class="es">Qué busca lograr realmente la institución (objetivos)</td><td style="padding:8px 10px;" class="en">What the organization is truly trying to achieve (objectives)</td>
+                <td style="padding:8px 10px;" class="es">La Escuela busca más output de investigación, acceso equitativo a IA y profesorado capacitado en agentes, pero su estrategia actual no atiende los dos últimos objetivos.</td><td style="padding:8px 10px;" class="en">The School's true goals include more research output, equitable AI access, and agent-skilled faculty, but its current strategy addresses neither of the latter two.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05); background:rgba(255,255,255,0.02);">
+                <td style="padding:8px 10px; text-align:center; color:var(--dim);">6</td>
+                <td style="padding:8px 10px;" class="es">Dónde es fuerte o débil la estrategia actual</td><td style="padding:8px 10px;" class="en">Where current strategy is strong or weak</td>
+                <td style="padding:8px 10px;" class="es">La estrategia actual es fuerte en IA para docencia y débil en las cuatro dimensiones clave para investigación: explicitud, coherencia, alineación al crux y recursos.</td><td style="padding:8px 10px;" class="en">The current strategy is strong for teaching AI and weak across the four dimensions that matter for research: explicitness, coherence, crux-alignment, and resourcing.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                <td style="padding:8px 10px; text-align:center; color:var(--dim);">7</td>
+                <td style="padding:8px 10px;" class="es">El crux de la situación</td><td style="padding:8px 10px;" class="en">The crux of the situation</td>
+                <td style="padding:8px 10px;" class="es">El crux es una curva de adopción partida en dos. Los investigadores avanzados enfrentan una barrera de presupuesto y habilidades; la mayoría cautelosa enfrenta la ausencia de un piso normativo compartido.</td><td style="padding:8px 10px;" class="en">The crux is a split adoption curve. Advanced researchers face a budget-and-skills barrier; the cautious majority faces the absence of a shared normative floor.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05); background:rgba(255,255,255,0.02);">
+                <td style="padding:8px 10px; text-align:center; color:var(--dim);">8</td>
+                <td style="padding:8px 10px;" class="es">Motores del crux</td><td style="padding:8px 10px;" class="en">Drivers of the crux</td>
+                <td style="padding:8px 10px;" class="es">Tres fuerzas alimentan la curva partida: un vacío normativo que frena a la mayoría cautelosa, una barrera de presupuesto y habilidades que frena a los avanzados, y una cultura "teaching school" que no reconoce ni financia la innovación en investigación.</td><td style="padding:8px 10px;" class="en">Three forces feed the split curve: a normative vacuum holding back the cautious majority, a budget-and-skills barrier holding back the advanced group, and a "teaching school" culture that neither recognizes nor funds research innovation.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                <td style="padding:8px 10px; text-align:center; color:var(--dim);">9</td>
+                <td style="padding:8px 10px;" class="es">Tema de solución emergente #1</td><td style="padding:8px 10px;" class="en">Emerging solution theme #1</td>
+                <td style="padding:8px 10px;" class="es">Un piso normativo mínimo para investigación, extendido desde la política de docencia, daría a la mayoría cautelosa el permiso institucional que hoy no tiene.</td><td style="padding:8px 10px;" class="en">A minimal normative floor for research, extended from the teaching policy, would give the cautious majority the institutional permission it currently lacks.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05); background:rgba(255,255,255,0.02);">
+                <td style="padding:8px 10px; text-align:center; color:var(--dim);">10</td>
+                <td style="padding:8px 10px;" class="es">Tema de solución emergente #2</td><td style="padding:8px 10px;" class="en">Emerging solution theme #2</td>
+                <td style="padding:8px 10px;" class="es">Una línea de presupuesto dedicada y un programa de capacitación en agentes destrabarían a los investigadores avanzados, sin necesidad de más lineamientos éticos.</td><td style="padding:8px 10px;" class="en">A dedicated budget line and an agent-skills training program would unlock advanced researchers, with no need for additional ethics guidance.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                <td style="padding:8px 10px; text-align:center; color:var(--dim);">11</td>
+                <td style="padding:8px 10px;" class="es">Tema de solución emergente #3</td><td style="padding:8px 10px;" class="en">Emerging solution theme #3</td>
+                <td style="padding:8px 10px;" class="es">Nombrar un dueño institucional de IA en investigación cerraría el riesgo de fuga de datos, conocido en las entrevistas como "Shadow AI", y daría a ambos grupos un canal que hoy no existe.</td><td style="padding:8px 10px;" class="en">Naming an institutional owner for research AI would close the data-leakage risk named in interviews as "Shadow AI," and give both groups a channel that doesn't exist today.</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 10px; text-align:center; color:var(--dim);">12</td>
+                <td style="padding:8px 10px;" class="es">Preguntas abiertas, riesgos y próximos pasos</td><td style="padding:8px 10px;" class="en">Open questions, risks, and next steps</td>
+                <td style="padding:8px 10px;" class="es">La recomendación no puede cerrarse hasta entrevistar al Decano y a los Directores de Grupo. Son los únicos que pueden confirmar si la inacción institucional es política, de gestión o de capacidad.</td><td style="padding:8px 10px;" class="en">The recommendation cannot be finalized until the Dean and Group Directors are interviewed. They are the only ones who can confirm whether institutional inaction is political, managerial, or capacity-driven.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SELF-CHECK -->
+      <div class="hard-card">
+        <p style="font-size:10px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:10px; font-weight:700;" class="es">Autochequeo</p>
+        <p style="font-size:10px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:10px; font-weight:700;" class="en">Self-Check</p>
+        <p style="font-size:13px; color:var(--light); line-height:1.7; margin:0;" class="es">Leídos en secuencia, los doce titulares cuentan el argumento completo sin abrir el cuerpo de ninguna slide: docencia avanzó y la investigación no (3), el modelo actual no está diseñado para investigación (4-6), el crux es una curva partida en dos (7-8), y las tres soluciones atienden cada mitad del crux por separado (9-11) sin cerrar la brecha de evidencia más crítica (12). Faltan por completar en vivo, con el equipo, tres a seis slides adicionales de exhibits (BoT, BMC, tabla de objetivos) que respaldan cada titular con la evidencia visual correspondiente.</p>
+        <p style="font-size:13px; color:var(--light); line-height:1.7; margin:0;" class="en">Read in sequence, the twelve headlines tell the complete argument without opening any slide body: teaching advanced and research didn't (3), the current model isn't designed for research (4-6), the crux is a split curve (7-8), and the three solutions each address one half of the crux (9-11) without closing the most critical evidence gap (12). Still to complete live, with the team, are three to six additional exhibit slides (BoT, BMC, objectives table) that back each headline with its corresponding visual evidence.</p>
+      </div>
+
+    </div><!-- fin flex column T16 -->
+  </div><!-- fin T16 -->
 </section>
 
 <!-- ══════════════════════════════════
